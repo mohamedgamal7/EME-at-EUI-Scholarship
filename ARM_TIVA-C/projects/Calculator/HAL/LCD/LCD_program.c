@@ -7,36 +7,38 @@
 #include "./LIB/BIT_MATH.h"
 #include "./LIB/STD_TYPES.h"
 
-// needed includes
+/* needed includes */
 #include "./MCAL/GPIO/GPIO_interface.h"
 
 
-// driver's includes
+/* driver's includes */
 #include "./HAL/LCD/LCD_interface.h"
 #include "./HAL/LCD/LCD_private.h"
 #include "./HAL/LCD/LCD_config.h"
 
-// Todo: replace with systick driver delay
 static void _delay_ms(u32 msecs)
 {
     u32 i,j;
-    for(i=0;i<msecs;i++)
-        for(j=0;j<3180;j++)
-        {};
-
+    for(i=0u;i<msecs;i++)
+    {
+        for(j=0u;j<3180u;j++)
+        {
+            __asm(" NOP ");
+        }
+    }
 }
 
-void LCD_Init()
+void LCD_Init(void)
 {
 
 
 #if (LCD_MODE == FOUR_BITS_MODE)
 {
-    // Initialize LCD Pins as output
+    /* Initialize LCD Pins as output */
     GPIO_Init_Port(LCD_DATAPORT, NO_PINS, LCD_LOW_BITS);
     GPIO_Init_Port(LCD_CTRLPORT, NO_PINS, RS|EN);
-   // delay 30 ms after power on
-    _delay_ms(30);
+   /* delay 30 ms after power on */
+    _delay_ms(30u);
     LCD_SendCommand(INIT_4_BITS_MODE);
     LCD_SendCommand(TWOLINES_5X7_4BIT_MODE);
     LCD_SendCommand(DIS_ON_CURSOR_BLINK);
@@ -46,11 +48,11 @@ void LCD_Init()
 }
 #elif(LCD_MODE == EIGHT_BITS_MODE)
 {
-        // Initialize LCD pins as output
+        /* Initialize LCD pins as output */
         GPIO_Init_Port(LCD_DATAPORT, NO_PINS, ALL_PINS);
         GPIO_Init_Port(LCD_CTRLPORT, NO_PINS, RS|EN);
-        // delay 30 ms after power on
-        _delay_ms(30);
+        /* delay 30 ms after power on */
+        _delay_ms(30u);
         LCD_SendCommand(TWOLINES_5X7_8BIT_MODE);
         LCD_SendCommand(DIS_ON_CURSOR_BLINK);
         LCD_SendCommand(INC_CURSOR);
@@ -67,44 +69,44 @@ void LCD_SendCommand(u8 Cpy_Command)
 
 #if (LCD_MODE == FOUR_BITS_MODE)
 {
-    // send command RS = 0
+    /* send command RS = 0 */
     GPIO_Write(LCD_CTRLPORT, RS, LOW);
-    // put high nibble of command on port
+    /* put high nibble of command on port */
     GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_Command>>4));
-    // enable high
+    /* enable high */
     GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-    // delay
-    _delay_ms(2);
-    // enable low
+    /* delay */
+    _delay_ms(2u);
+    /* enable low */
     GPIO_Write(LCD_CTRLPORT, EN, LOW);
-    // delay
-    _delay_ms(2);
-    // put low nibble of command on port
-    GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_Command&0X0F));
-    // enable high
+    /* delay */
+    _delay_ms(2u);
+    /* put low nibble of command on port */
+    GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_Command&0X0FU));
+    /* enable high */
     GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-    // delay
-    _delay_ms(2);
-    // enable low
+    /* delay */
+    _delay_ms(2u);
+    /* enable low */
     GPIO_Write(LCD_CTRLPORT, EN, LOW);
-    // delay
-    _delay_ms(2);
+    /* delay */
+    _delay_ms(2u);
 
 }
 #elif (LCD_MODE == EIGHT_BITS_MODE)
 {
-    // send command RS = 0
+    /* send command RS = 0 */
        GPIO_Write(LCD_CTRLPORT, RS, LOW);
-       // put command on port first
+       /* put command on port first */
        GPIO_Write(LCD_DATAPORT,ALL_PINS,Cpy_Command);
-       // enable high
+       /* enable high */
        GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-       // delay
-       _delay_ms(2);
-       // enable low
+       /* delay */
+       _delay_ms(2u);
+       /* enable low */
        GPIO_Write(LCD_CTRLPORT, EN, LOW);
-       // delay
-       _delay_ms(3);
+       /* delay */
+       _delay_ms(3u);
 }
 #endif
 
@@ -116,55 +118,55 @@ void LCD_DisplayCharacter(u8 Cpy_CharToSend)
 
 #if (LCD_MODE == FOUR_BITS_MODE)
 {
-        // send data RS = 1
+        /* send data RS = 1 */
         GPIO_Write(LCD_CTRLPORT, RS, HIGH);
-        // put high nibble of data on port
+        /* put high nibble of data on port */
         GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_CharToSend>>4));
-        // enable high
+        /* enable high */
         GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-        // delay
-        _delay_ms(2);
-        // enable low
+        /* delay */
+        _delay_ms(2u);
+        /* enable low */
         GPIO_Write(LCD_CTRLPORT, EN, LOW);
-        // delay
-        _delay_ms(2);
-        // put low nibble of data on port
-        GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_CharToSend&0X0F));
-        // enable high
+        /* delay */
+        _delay_ms(2u);
+        /* put low nibble of data on port */
+        GPIO_Write(LCD_DATAPORT,LCD_LOW_BITS, (Cpy_CharToSend&0X0FU));
+        /* enable high*/
         GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-        // delay
-        _delay_ms(2);
-        // enable low
+        /* delay */
+        _delay_ms(2u);
+        /* enable low */
         GPIO_Write(LCD_CTRLPORT, EN, LOW);
-        // delay
-        _delay_ms(2);
+        /* delay */
+        _delay_ms(2u);
 
 
 }
 #elif (LCD_MODE == EIGHT_BITS_MODE)
 {
-         // send data RS = 1
+         /* send data RS = 1 */
           GPIO_Write(LCD_CTRLPORT, RS, HIGH);
-          // put data on port first
+          /* put data on port first */
           GPIO_Write(LCD_DATAPORT,ALL_PINS,Cpy_CharToSend);
-          // enable high
+          /* enable high  */
           GPIO_Write(LCD_CTRLPORT, EN, HIGH);
-          // delay
+          /* delay */
           _delay_ms(2);
-          // enable low
+          /* enable low */
           GPIO_Write(LCD_CTRLPORT, EN, LOW);
-          // delay
+          /* delay */
           _delay_ms(3);
 }
 #endif
 
 }
 
-void LCD_DisplayString(u8 * str)
+void LCD_DisplayString(const u8 * str)
 {
-    u8 i;
-    for(i=0;str[i];i++)
+    u8 LCD_COUNT;
+    for(LCD_COUNT=0u;str[LCD_COUNT]!=0u;LCD_COUNT++)
     {
-        LCD_DisplayCharacter(str[i]);
+        LCD_DisplayCharacter(str[LCD_COUNT]);
     }
 }

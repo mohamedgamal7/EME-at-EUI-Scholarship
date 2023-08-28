@@ -10,24 +10,24 @@
 
 
 
-// LCD MODE SELECTION
-// 4bit mode or 8 bit mode
+/* LCD MODE SELECTION */
+/* 4bit mode or 8 bit mode */
 
 #define LCD_MODE  FOUR_BITS_MODE
 
 
 
-// LCD_PORTS
-// select suitable data and control ports
+/* LCD_PORTS */
+/* select suitable data and control ports */
 
 #define LCD_DATAPORT PORTB_ID
-#define LCD_CTRLPORT PORTB_ID
+#define LCD_CTRLPORT PORTA_ID
 
 
 
-// LCD PINS
+/* LCD PINS */
 
-#define RS P4
-#define EN P5
+#define RS P3
+#define EN P2
 
 #endif

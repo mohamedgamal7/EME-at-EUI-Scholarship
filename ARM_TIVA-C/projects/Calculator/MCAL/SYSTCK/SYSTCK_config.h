@@ -1,13 +1,17 @@
 /********************************************************************************************/
 /*Author: Mohamed Gamal Rousdhy                                                             */
 /*Version: V01                                                                              */
-/*Date: 20/08/2023                                                                          */
-/*Description: LCD driver configuration file                                               */
+/*Date: 19/08/2023                                                                          */
+/*Description: SYSTCK driver configuration file                                               */
 /********************************************************************************************/
-#ifndef _LCD_PRIVATE_H
-#define _LCD_PRIVATE_H
+#ifndef _SYSTCK_CONFIG_H
+#define _SYSTCK_CONFIG_H
 
-
-static void _delay_ms(u32 msecs);
+/*
+ * Options for clck sources are : SYS_CLOCK, PIOSC_4
+ *
+ */
+/* Clock source selection */
+#define CLK_SRC_SEL PIOSC_4
 
 #endif

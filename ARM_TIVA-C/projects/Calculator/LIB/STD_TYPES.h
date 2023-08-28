@@ -2,16 +2,26 @@
 /*Author: Mohamed Gamal Rousdhy                                                             */
 /*Version: V01																			    */
 /*Date:	19/08/2023																			*/
-/*Description: Bit maipulation macros 														*/
+/*Description: Frequently used Standard types 												*/
 /********************************************************************************************/
 
-#ifndef _BIT_MATH_H
-#define _BIT_MATH_H
+#ifndef _STD_TYPES_H
+#define _STD_TYPES_H
 
-#define SET_BIT(REG, BIT)   ((REG) |= ((u32)1ul << (BIT)))
-#define CLR_BIT(REG,BIT)   	((REG)&=~((u32)1ul<<(BIT)))
-#define TOG_BIT(REG,BIT)   	((REG)^=((u32)1ul<<(BIT)))
-#define GET_BIT(REG,BIT)   (((u32)(REG)>>(BIT))&(u32)1ul)
+
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned long u32;
+
+typedef signed char s8;
+typedef signed short  s16;
+typedef signed long  long s32;
+
+typedef unsigned long long  u64 ;
+typedef signed long long  s64 ;
+
+typedef float  f32;
+typedef double f64;
 
 
 #endif

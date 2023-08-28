@@ -1,0 +1,221 @@
+Description	Resource	Path	Location	Type
+(MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct: ccs=ccs (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct: ccs=ccs	KEYPAD_program.c	/n1/HAL/KEYPAD	 	C/C++ Problem
+#1376-D (MISRA-C:2004 1.1/R) Ensure strict ANSI C mode (-ps) is enabled	STD_TYPES.h	/n1/LIB	line 12	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 83	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	EXTI_program.c	/n1/MCAL/EXTI	line 91	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 17	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 21	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 45	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 114	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 128	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 60	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is complex	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 156	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a return expression	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1393-D (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a return expression	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 102	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1395-D (MISRA-C:2004 10.3/R) The value of a complex expression of integer type shall only be cast to a type of the same signedness that is no wider than the underlying type of the expression	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1397-D (MISRA-C:2004 10.5/R) If the bitwise operators ~ and << are applied to an operand of underlying type unsigned char or unsigned short, the result shall be immediately cast to the underlying type of the operand	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 60	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 83	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	EXTI_program.c	/n1/MCAL/EXTI	line 91	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 20	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 21	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 28	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 33	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 35	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 41	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 43	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 45	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 47	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 53	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 59	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 61	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 67	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 73	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 75	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 81	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 83	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 85	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 87	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 92	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 97	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 102	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 142	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 144	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 21	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 20	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 91	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 83	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 60	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	EXTI_program.c	/n1/MCAL/EXTI	line 60	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 29	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 27	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 25	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 23	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 21	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 31	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 20	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_private.h	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_private.h	/n1/MCAL/GPIO	line 29	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_private.h	/n1/MCAL/GPIO	line 27	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_private.h	/n1/MCAL/GPIO	line 25	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_private.h	/n1/MCAL/GPIO	line 10	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 86	C/C++ Problem
+#1469-D (MISRA-C:2004 14.8/R) The statement forming the body of a switch, while, do ... while or for statement shall be a compound statement	GPIO_program.c	/n1/MCAL/GPIO	line 21	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 39	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 79	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 62	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 59	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 56	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 45	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 31	C/C++ Problem
+#1476-D (MISRA-C:2004 17.4/R) Array indexing shall be the only allowed form of pointer arithmetic	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_program.c	/n1/MCAL/EXTI	line 20	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	GPIO_program.c	/n1/MCAL/GPIO	line 45	C/C++ Problem
+#1498-D (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_private.h	/n1/MCAL/EXTI	line 32	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_private.h	/n1/MCAL/EXTI	line 25	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_private.h	/n1/MCAL/EXTI	line 11	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_config.h	/n1/MCAL/EXTI	line 17	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_config.h	/n1/MCAL/EXTI	line 14	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	EXTI_config.h	/n1/MCAL/EXTI	line 11	C/C++ Problem
+#1476-D (MISRA-C:2004 17.4/R) Array indexing shall be the only allowed form of pointer arithmetic	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1430-D (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "CpyPort_ID" is used as an operand of # or ##.	GPIO_private.h	/n1/MCAL/GPIO	line 13	C/C++ Problem
+#1459-D (MISRA-C:2004 12.1/A) Limited dependence should be placed on C's operator precedence rules in expressions	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1430-D (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "CpyPort_ID" is used as an operand of # or ##.	EXTI_private.h	/n1/MCAL/EXTI	line 14	C/C++ Problem
+#1455-D (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments	SYSTCK_config.h	/n1/MCAL/SYSTCK	line 14	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 33	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 35	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 41	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 43	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 45	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 47	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1469-D (MISRA-C:2004 14.8/R) The statement forming the body of a switch, while, do ... while or for statement shall be a compound statement	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 45	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 53	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 59	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 61	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 67	C/C++ Problem
+#1407-D (MISRA-C:2004 12.8/R) The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 73	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	KEYPAD_program.c	/n1/HAL/KEYPAD	line 43	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 75	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	KEYPAD_program.c	/n1/HAL/KEYPAD	line 40	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 81	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 46	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 83	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 40	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 85	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 32	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 87	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 30	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 92	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 28	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 97	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 26	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 102	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	GPIO_program.c	/n1/MCAL/GPIO	line 24	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 69	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 60	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 57	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 142	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 48	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 144	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 34	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 146	C/C++ Problem
+#1406-D (MISRA-C:2004 12.7/R) Bitwise operators shall not be applied to operands whose underlying type is signed	EXTI_program.c	/n1/MCAL/EXTI	line 23	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 148	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 148	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 156	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 156	C/C++ Problem
+#1400-D (MISRA-C:2004 11.3/A) A cast should not be performed between a pointer type and an integral type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 146	C/C++ Problem
+#1464-D (MISRA-C:2004 10.6/R) A "U" suffix shall be applied to all constants of unsigned type	SYSTCK_program.c	/n1/MCAL/SYSTCK	line 28	C/C++ Problem

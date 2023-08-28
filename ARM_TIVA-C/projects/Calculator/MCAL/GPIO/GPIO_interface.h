@@ -9,35 +9,35 @@
 #ifndef _GPIO_INTERFACE_H
 #define _GPIO_INTERFACE_H
 
-// Pin masks
+/* Pin masks */
 
-#define P0          0x01
-#define P1          0x02
-#define P2          0x04
-#define P3          0x08
-#define P4          0x10
-#define P5          0x20
-#define P6          0x40
-#define P7          0x80
-#define NO_PINS     0x00
-#define ALL_PINS    0xFF
-#define HIGH_NIBBLE 0XF0
-#define LOW_NIBBLE  0X0F
-
-
-// states
-#define HIGH      0xFF
-#define LOW       0x00
+#define P0          0x01U
+#define P1          0x02U
+#define P2          0x04U
+#define P3          0x08U
+#define P4          0x10U
+#define P5          0x20U
+#define P6          0x40U
+#define P7          0x80U
+#define NO_PINS     0x00U
+#define ALL_PINS    0xFFU
+#define HIGH_NIBBLE 0XF0U
+#define LOW_NIBBLE  0X0FU
 
 
+/* states */
+#define HIGH      0xFFU
+#define LOW       0x00U
 
-// Ports MACROS
-#define PORTA_ID  0
-#define PORTB_ID  1
-#define PORTC_ID  2
-#define PORTD_ID  3
-#define PORTE_ID  4
-#define PORTF_ID  5
+
+
+/* Ports MACROS */
+#define PORTA_ID  0U
+#define PORTB_ID  1U
+#define PORTC_ID  2U
+#define PORTD_ID  3U
+#define PORTE_ID  4U
+#define PORTF_ID  5U
 
 /**
  * Function: GPIO_Init_Port

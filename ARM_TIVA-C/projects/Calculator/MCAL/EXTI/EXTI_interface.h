@@ -4,7 +4,9 @@
   Description: EXTI driver interface file      
 */
 
-// Pin masks
+#ifndef _EXTI_INTERFACE_H
+#define _EXTI_INTERFACE_H
+/* Pin masks */
 
 #define EXTI_P0          0x01
 #define EXTI_P1          0x02
@@ -23,38 +25,36 @@
 
 
 
-// Ports MACROS
-#define EXTI_PORTA_ID A
+/* Ports MACROS */
+#define EXTI_PORTA_ID  0u
 #define EXTI_PORTF_ID  5
 
 
-#ifndef _EXTI_INTERFACE_H
-#define _EXTI_INTERFACE_H
 
-// edge or level detection
+/* edge or level detection */
 #define EDGE_DETECTION  0
 #define LEVEL_DETECTION 1
 
-// single edge or both edges or no edges
+/* single edge or both edges or no edges */
 #define SINGLE_EDGE   0
 #define BOTH_EDGES    1
 #define NO_EDGES      2
 
-// RISING OR FALLING EDGE
+/* RISING OR FALLING EDGE */
 #define FALLING_EDGE 0
 #define RISING_EDGE  1
 
-// INTEURRPT MASK SENT TO NVIC
+/* INTEURRPT MASK SENT TO NVIC */
 #define MASKED     0
 #define UNMAKSED   1
 
-// Interuppt Number
-#define  IN_PORTA    0
-#define  IN_PORTB    1
-#define  IN_PORTC    2
-#define  IN_PORTD    3
-#define  IN_PORTE    4
-#define  IN_PORTF    30
+/* Interuppt Number */
+#define  IN_PORTA    0u
+#define  IN_PORTB    1u
+#define  IN_PORTC    2u
+#define  IN_PORTD    3u
+#define  IN_PORTE    4u
+#define  IN_PORTF    30u
 
 
 
@@ -64,9 +64,9 @@
 
 
 
-// FUNCTION PROTOTYPES
+/* FUNCTION PROTOTYPES */
 void EXTI_Init(u8 CpyPort_ID,u8 CpyPinMask,u8 CPyPinValue);
-
+void GPIOPortE_handler(void);
 
 
 #endif

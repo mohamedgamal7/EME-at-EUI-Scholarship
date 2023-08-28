@@ -10,14 +10,14 @@
 #include "./MCAL/EXTI/EXTI_private.h"
 #include "./MCAL/EXTI/EXTI_config.h"
 
-volatile u8 INT_FLAG_PORTE = 0 ;
+volatile u8 INT_FLAG_PORTE = 0u ;
 
 
 void EXTI_Init(u8 CpyPort_ID,u8 CpyPinMask, u8 CPyPinValue)
 {
-    if(CpyPort_ID<6)
+    if(CpyPort_ID<6u)
     {
-        // edge or level detection
+        /* edge or level detection */
         #if(DETECTION_SEL==EDGE_DETECTION)
         {
           *((volatile unsigned long *)GPIO_PORT_ADDRESS(IS_OFFSET)) &=~(CpyPinMask&CPyPinValue);
@@ -28,7 +28,7 @@ void EXTI_Init(u8 CpyPort_ID,u8 CpyPinMask, u8 CPyPinValue)
         }
         #endif
 
-        // single edge or both edges
+        /* single edge or both edges */
         #if(EDGE_OR_EDGES==SINGLE_EDGE)
         {
          *((volatile unsigned long *)GPIO_PORT_ADDRESS(IBE_OFFSET)) &=~(CpyPinMask&CPyPinValue);
@@ -42,7 +42,7 @@ void EXTI_Init(u8 CpyPort_ID,u8 CpyPinMask, u8 CPyPinValue)
         }
         #endif
 
-        // rising edge or falling edge
+      /* rising edge or falling edge */
         #if(EDGE_SEL==FALLING_EDGE)
         {
           *((volatile unsigned long *)GPIO_PORT_ADDRESS(IEV_OFFSET)) &=~(CpyPinMask&CPyPinValue);
@@ -53,22 +53,23 @@ void EXTI_Init(u8 CpyPort_ID,u8 CpyPinMask, u8 CPyPinValue)
         }
         #endif
 
-        // unmask the interuppt
+        /*unmask the interuppt */
         *((volatile unsigned long *)GPIO_PORT_ADDRESS(IM_OFFSET)) |= (CpyPinMask);
 
-        // enable interuppt
+        /* enable interuppt */
         NVIC_EN0_R|=(1<<IN);
 
-        // enable processor interuppt
+        /*enable processor interuppt */
         __asm(" CPSIE i ");
     }
 }
 
-//handle interuppt on Port E
+/* handle interuppt on Port E */
 void GPIOPortE_handler(void)
 {
-   GPIO_PORTE_ICR_R|=(0x1e<<0); //clear interrupt flag
-   INT_FLAG_PORTE = 1 ;
+    /* clear interrupt flag */
+   GPIO_PORTE_ICR_R|=(0x1eu<<0u);
+   INT_FLAG_PORTE = 1u ;
 
 
 }

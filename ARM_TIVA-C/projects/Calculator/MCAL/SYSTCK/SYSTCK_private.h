@@ -2,18 +2,22 @@
 /*Author: Mohamed Gamal Rousdhy                                                             */
 /*Version: V01                                                                              */
 /*Date: 19/08/2023                                                                          */
-/*Description: KEYPAD driver configuration file                                             */
+/*Description: SYSTCK driver configuration file                                               */
 /********************************************************************************************/
-#ifndef _KEYPAD_CONFIG_H
-#define _KEYPAD_CONFIG_H
+#ifndef _SYSTCK_PRIVATE_H
+#define _SYSTCK_PRIVATE_H
 
-#define KEYPAD_COLSPORT 4u
-#define KEYPAD_ROWSPORT 3u
 
-#define KEYPAD_COL_BITS  0xf0u
-#define KEYPAD_ROW_BITS  0x0fu
+typedef struct
+{
+   volatile u32 STCTRL_R;
+   volatile u32 STRELOAD_R;
+   volatile u32 STCURRENT_R;
 
-#define ROWS_START 0u
-#define COLS_START 1u
+}Systick_R;
+
+
+#define  SYSTICK ((volatile Systick_R*)(0xE000E010))
 
 #endif
+

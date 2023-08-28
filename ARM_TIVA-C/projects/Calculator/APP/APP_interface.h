@@ -6,7 +6,7 @@
 #ifndef _APP_INTERFACE_H
 #define _APP_INTERFACE_H
 
-// app driver function
+/* app driver function */
 void APP(void);
 
 #endif

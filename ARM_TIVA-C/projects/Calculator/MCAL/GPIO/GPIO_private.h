@@ -7,10 +7,9 @@
 #ifndef _GPIO_PRIVATE_H
 #define _GPIO_PRIVATE_H
 
-//////////////////////////////Register base addresses and offsets ///////////////////////////
 
 #define PORTS_BASE_ADDRESS 	0x40004000
-#define PORT_OFFSET(CpyPort_ID)  (((CpyPort_ID%4)<<12) + (CpyPort_ID/4)*(2<<16))
+#define PORT_OFFSET(CpyPort_ID)  ((((CpyPort_ID)%4)<<12) + ((CpyPort_ID)/4)*(2<<16))
 #define GPIO_PORT_ADDRESS(REG_OFFSET)  	(PORTS_BASE_ADDRESS +PORT_OFFSET(CpyPort_ID) + REG_OFFSET)
 
 #define GPIOLOCK_OFFSET 	0x520
@@ -22,14 +21,12 @@
 #define NO_OFFSET           0x000
 
 
-/////////////////////////////////Some registers definitions/////////////////////////////////
 
-// Clock gating register 
+/* Clock gating register */
 #define SYSCTL_RCGCGPIO_R       (*((volatile unsigned long *)0x400FE608))
-//  General-Purpose Input/Output Peripheral Ready register
+/*  General-Purpose Input/Output Peripheral Ready register */
 #define SYSCTL_PRGPIO_R         (*((volatile unsigned long *)0x400FEA08))
 
-/////////////////////////////////// Data register and Bit banding ///////////////////////////
 
 #endif
 

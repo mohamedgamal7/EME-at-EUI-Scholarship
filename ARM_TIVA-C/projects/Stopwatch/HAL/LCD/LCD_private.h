@@ -8,6 +8,6 @@
 #define _LCD_PRIVATE_H
 
 
-
+static void _delay_ms(u32 msecs);
 
 #endif

@@ -1,8 +1,8 @@
 /********************************************************************************************/
-/*Author: Mohamed Gamal Rousdhy                                                             */
-/*Version: V01                                                                              */
-/*Date: 20/08/2023                                                                          */
-/*Description: LCD driver configuration file                                               */
+/* Author: Mohamed Gamal Rousdhy                                                             */
+/* Version: V01                                                                              */
+/* Date: 20/08/2023                                                                          */
+/* Description: LCD driver configuration file                                               */
 /********************************************************************************************/
 #ifndef _LCD_INTERFACE_H
 #define _LCD_INTERFACE_H
@@ -12,13 +12,13 @@
 #define EIGHT_BITS_MODE   1
 
 /* LCD high data bits */
-#define LCD_HIGH_BITS  0XF0U
-#define LCD_LOW_BITS   0X0FU
+#define LCD_HIGH_BITS  0x0fu
+#define LCD_LOW_BITS   0xf0u
 
 /* LCD COMMANDS */
 #define LCD_CLEAR                0x01U /* Clear display screen */
 #define INC_CURSOR               0x06U /* Increment cursor (shift cursor to right) */
-#define DISPLAY_ON_CURSOROFF     0x0CU /* Display ON, cursor OFF */
+#define DISPLAY_ON_CURSOROFF     0xOCU /* Display ON, cursor OFF */
 #define DIS_ON_CURSOR_BLINK      0x0FU /* Display ON, cursor blinking */
 #define FORCE_FIRSTL             0x80U /* Force cursor to beginning of first line */
 #define FORCE_SECONDL            0xC0U /* Force cursor to beginning of second line */
@@ -33,11 +33,9 @@
 #define INIT_4_BITS_MODE         0x02U /* Initialize 4 bits mode */
 
 /* FUNCTION PROTOTYPES */
-void LCD_Init(void); /* Initialize the LCD */
-void LCD_SendCommand(u8 Cpy_Command); /* Send a command to the LCD */
-void LCD_DisplayCharacter(u8 Cpy_CharToSend); /* Display a character on the LCD */
-void LCD_DisplayString(u8 * str); /* Display a string on the LCD */
-void LCD_MoveCursorTo(u8 row,u8 col); /* Move cursor to a certain position */
+void LCD_Init(void);
+void LCD_SendCommand(u8 Cpy_Command);
+void LCD_DisplayCharacter(u8 Cpy_CharToSend);
+void LCD_DisplayString(const u8 * str);
 
 #endif
-

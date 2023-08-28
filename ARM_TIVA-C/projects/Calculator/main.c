@@ -6,8 +6,10 @@
 /********************************************************************************************/
 #include "./APP/APP_interface.h"
 
-int main()
+void main(void);
+
+void main(void)
 {
-    // start the calculator App
+    /* start the calculator App*/
     APP();
 }
