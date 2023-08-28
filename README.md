@@ -10,7 +10,7 @@ The **Automotive Embedded Systems Diploma** at EUI University is a comprehensive
 
 This repository is meticulously organized to encompass a wide range of topics covered in the diploma program:
 
-- 📁 [CProgramming](./CProgramming): Explore labs and assignments related to the fundamentals of C programming. As a culmination of this section, I've successfully developed a **Student Database Management System** showcasing my application of C programming skills in a practical automotive context. 
+- 📁 [CProgramming](./C-programming): Explore labs and assignments related to the fundamentals of C programming. As a culmination of this section, I've successfully developed a **Student Database Management System** showcasing my application of C programming skills in a practical automotive context. 
 
   ![C Programming Progress](https://progress-bar.dev/100/?title=Progress&color=red,green)
 
