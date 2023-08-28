@@ -18,7 +18,6 @@ Welcome to the TIVA C Stopwatch project! 🚀 In this project, we'll be using th
 - TIVA C TM4C123GXL microcontroller
 - LCD Display 🖥️
 - Pushbuttons 🛈
-- Buzzer 🎵 (for audible alerts)
 - Jumper wires 🚦
 - Breadboard 🍞
 
