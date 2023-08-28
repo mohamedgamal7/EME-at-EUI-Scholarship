@@ -1,0 +1,4 @@
+Description	Resource	Path	Location	Type
+#1376-D (MISRA-C:2004 1.1/R) Ensure strict ANSI C mode (-ps) is enabled	STD_TYPES.h	/Test/LIB	line 12	C/C++ Problem
+
+(MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct: ccs=ccs (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct: ccs=ccs	main.c	/Test	 	C/C++ Problem

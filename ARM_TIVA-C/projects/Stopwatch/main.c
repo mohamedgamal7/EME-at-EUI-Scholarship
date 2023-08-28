@@ -65,7 +65,7 @@ u32 main(void)
         }
         else if (switch1_pressed) /* pause the LCD */
         {
-            if(state==0)
+            if(state==0U)
             {
                 switch1_pressed = 0u ;
                 Systick_StopInterval();
@@ -128,12 +128,12 @@ void Fill_string(void)
           mins =  (u8)(time_passed / 60u);
           hours = (u8)(time_passed / 3600u);
         /* Todo: find a cleaner implementation */
-          Str_To_display[0] = (hours / 10) + '0';
-          Str_To_display[1] = (hours % 10) + '0';
-          Str_To_display[2] = ':';
-          Str_To_display[3] = (mins / 10) + '0';
-          Str_To_display[4] = (mins % 10) + '0';
-          Str_To_display[5] = ':';
-          Str_To_display[6] = (secs / 10) + '0';
-          Str_To_display[7] = (secs % 10) + '0';
+          Str_To_display[0] = (u8)(((u8)hours /(u8) 10) +(u8) 48); /*48 is the ascii of zero */
+          Str_To_display[1] = (u8)(((u8)hours %(u8) 10) + (u8)48); /*48 is the ascii of zero */
+          Str_To_display[2] = 58u;  /*ASCII of ':' for misra */
+          Str_To_display[3] = (u8)(((u8)mins / (u8)10) + (u8)48); /*48 is the ascii of zero */
+          Str_To_display[4] = (u8)((mins % (u8)10) + (u8)48); /*48 is the ascii of zero */
+          Str_To_display[5] = 58u;   /*ASCII of ':' for misra */
+          Str_To_display[6] = (u8)(((u8)secs / (u8)10) + (u8)48); /*48 is the ascii of zero */
+          Str_To_display[7] = (u8)(((u8)secs % (u8)10) + (u8)48); /*48 is the ascii of zero */
     }
