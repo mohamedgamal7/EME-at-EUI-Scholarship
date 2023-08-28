@@ -14,7 +14,7 @@ This repository is meticulously organized to encompass a wide range of topics co
 
   ![C Programming Progress](https://progress-bar.dev/100/?title=Progress&color=red,green)
 
-- 📁 [ARM Cortex M4 on TivaC TM4c123GXL](./ARMTivaCProjects): Witness a series of exciting ARM Tiva C microcontroller projects showcasing my advanced programming skills. 
+- 📁 [ARM Cortex M4 on TivaC TM4c123GXL](./ARM_TIVA-C): Witness a series of exciting ARM Tiva C microcontroller projects showcasing my advanced programming skills. 
 
   ![ARM Tiva-C Projects Progress](https://progress-bar.dev/70/?title=Progress&color=red,yellow,green)
 
