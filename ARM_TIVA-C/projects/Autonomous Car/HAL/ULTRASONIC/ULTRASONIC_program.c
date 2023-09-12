@@ -1,6 +1,11 @@
-//
-//
-///*Library includes*/
+/********************************************************************************************/
+/*Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb and Aya Yasser                  */
+/*Version: V01                                                                              */
+/*Date: 19/08/2023                                                                          */
+/*Description: Ultrasonic Driver program                                                     */
+/********************************************************************************************/
+
+/*Library includes*/
 #include "LIB/BIT_MATH.h"
 #include "LIB/tm4c123gh6pm.h"
 #include "LIB/types.h"
@@ -17,12 +22,31 @@
 #include "./HAL/ULTRASONIC/ULTRASONIC_private.h"
 #include "./HAL/ULTRASONIC/ULTRASONIC_config.h"
 
-volatile uint32_t Rise, Fall;
-volatile uint8_t Interrupt_Entry=0; /*State that checks if i am going to read positive edge or negative edge*/
-float Distance;
-int Difference;
-float Period = 0U;
 
+static void Ultrasonic_GPIO_Init(void)
+{
+    /*select  Pin4 PORTC as an alternative function*/
+    GPIO_PORTC_AFSEL_R|=(1<<4);
+    /*Select the CCP pin by inserting the PINMUX value in its position*/
+    GPIO_PORTC_PCTL_R|=(0x7<<4*4);
+
+}
+
+static void Ultrasonic_Timer_Init(void)
+{
+    /* Enable WTIMER0 Clock */
+    TimerStartUse(WTIMER_0);
+    /* Disable WTIMER0 Clock */
+    TimerDisable( WTIMER_0,TIMERA);
+    /* Configure WTIMER0 as input capture */
+    TimerConfigure (WTIMER_0, TIMERA, WTIMER_MODE32 , TMR_CAPTURE | TCMR);
+    /*Used for stalling the timer at debugging*/
+    TimerControlStall(WTIMER_0, TIMERA, true);
+    /*Wait for interuppt on both edges*/
+    TimerControlEvent (WTIMER_0,TIMERA, BOTH_EDGES);
+    /* Enable Timer A */
+    TimerEnable(WTIMER_0, TIMERA);
+}
 void Ultrasonic_Init(void)
 {
 
@@ -31,64 +55,53 @@ void Ultrasonic_Init(void)
     Ultrasonic_Timer_Init();
 }
 
-void trigger_measurement(void)
+static void trigger_measurement(void)
 {
 
+    /* Triggers start of measurement of Ultrasonic device */
       DIO_Write(PORTB, P0, HIGH);
-      delay_us(160);
+      delay_us(15);
       DIO_Write(PORTB, P0, LOW);
 
 
 }
 
-static void Ultrasonic_GPIO_Init(void)
+float Measure_Distance(void)
 {
+    uint32 Rise=0, Fall=0;
+    float Distance;
+    float Period = 0U;
+    uint32 TimeOut = TIMEOUT_DURATION_TICKS;
+
+    /*clear timer interuppt before trigger as a safety procedure*/
+    TimerIntClear(WTIMER_0, CAECINT);
+    trigger_measurement();
+    /*Timeout is a protection mechanism to prevent being stuck in the while loop*/
+    while(!TimerIntStatus(WTIMER_0, CAEIM) && --TimeOut);
+    if(TimeOut <= 0)
+        return -1;
+    /*Capture rising edge time */
+    Rise = TimerValueGet(WTIMER_0, TIMERA);
+    /*Clear timer interuppt flag to start recieving new interuppts*/
+    TimerIntClear(WTIMER_0, CAECINT);
+    /*reset the timeout duration for the new edge*/
+    TimeOut = TIMEOUT_DURATION_TICKS;
+    while(!TimerIntStatus(WTIMER_0, CAEIM) && --TimeOut);
+    if(TimeOut <= 0)
+        return -1;
+    /*Capture Falling edge time */
+    Fall = TimerValueGet(WTIMER_0, TIMERA);
+    /*Calculate the period in Secs*/
+    Period = (Rise - Fall) / 16000000.0f;
+    /*Measure distance by multiplying by the speed of sound in cm and dividing by 2 as the wave took this paths twice*/
+    Distance = (Period * 34300U) / 2U;
 
 
-    GPIOPinConfigure(GPIO_PD0_WT2CCP0);
-    GPIO_PORTD_AFSEL_R|=(1<<0);
-    GPIO_PORTD_PCTL_R|=(0x7<<0);
-    //GPIOPinTypeTimer(GPIO_PORTD_BASE, GPIO_PIN_0); /* PD0 for timer for ECHO */
+    return Distance;
+
 
 }
 
-static void Ultrasonic_Timer_Init(void)
-{
-    /* Enable WTIMER2 Clock */
-    //SysCtlPeripheralEnable(SYSCTL_PERIPH_WTIMER2);
-    TimerStartUse(WTIMER_0);
-    //TimerDisable(WTIMER2_BASE, TIMER_A);
-    TimerDisable( WTIMER_0,TIMERA);
-    //TimerConfigure(WTIMER2_BASE, TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_CAP_TIME); /* Timer A with Capture edge time mode */
-    TimerConfigure (WTIMER_2, TIMERA, WTIMER_MODE32 , TMR_CAPTURE);
-    //TimerControlEvent(WTIMER2_BASE, TIMER_A, TIMER_EVENT_BOTH_EDGES); /* Capture on rising edge */
-    //TimerControlEvents(WTIMER_2,TIMERA, BOTH_EDGES) /* Capture on rising edge */
-    //IntEnable(INT_WTIMER2A);
-    //TimerIntRegister(0WTIMER_2, TIMERA, &Ultrasonic_Callback);
-    //TimerIntEnable(WTIMER_2, TIMER_CAPA_EVENT);
-    //IntMasterEnable();
-    TimerEnable(WTIMER_2, TIMERA); /* Enable Timer A */
-}
 
-void Ultrasonic_Callback(void)
-{
-    //GPIOIntClear(GPIO_PORTD_BASE, GPIO_PIN_0);
-    if (!Interrupt_Entry)
-    {
-        Rise = TimerValueGet(WTIMER2_BASE, TIMER_A);
-        Interrupt_Entry = 1U;
-    }
-    //TIMER_TAR 4244408905 (Decimal)    GPTM Timer A [Memory Mapped]
 
-    else
-    {
-        Fall = TimerValueGet(WTIMER2_BASE, TIMER_A);
-        Interrupt_Entry = 0U;
-        Difference = Rise - Fall;
-        Period = Difference / 16000000.0;
-        Distance = (Period * 34000U) / 2U;
 
-    }
-    TimerIntClear(WTIMER2_BASE, TIMER_CAPA_EVENT);
-
-}

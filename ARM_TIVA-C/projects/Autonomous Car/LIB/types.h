@@ -1,7 +1,17 @@
-#ifndef TYPES_
-#define TYPES_
+/********************************************************************************************/
+/* Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb and Aya Yasser                 */
+/* Version: V01                                                                             */
+/* Date: 10/09/2023                                                                         */
+/* Description: Types Header file                                                           */
+/********************************************************************************************/
+
+#ifndef TYPES_H
+#define TYPES_H
+
+/*Defines*/
 #define Port_Num 6
-/*                                    TYPEDEF                                      */
+
+/*Typedefs*/
 typedef char int8;
 typedef char* int8_ptr;
 typedef unsigned char uint8;
@@ -18,7 +28,9 @@ typedef long int64;
 typedef long* int64_ptr;
 typedef unsigned long uint64;
 typedef unsigned long* uint64_ptr;
-/*                                    ENUM                                      */
+
+/*ENUMS*/
+
 typedef enum {
     PORTA, PORTB , PORTC, PORTD, PORTE, PORTF
 }Port_Select;
@@ -31,7 +43,9 @@ typedef enum {
 typedef enum {
     LOW = 0, HIGH = 1, NOT_WORKING=2
 }Polarity;
-/*                                    UNION                                      */
+
+/*UNIONS*/
+
 typedef union {
     struct{
         unsigned char Pin0:1;
@@ -45,7 +59,9 @@ typedef union {
     };
     unsigned char Pins_Data;
 }Pins_Init;
-/*                                    STRUCTURE                                      */
+
+/*STRUCTURES*/
+
 typedef struct {
     Pins_Init Pins ;
     Pins_Init Pin_DirectionHigh;
@@ -58,6 +74,7 @@ typedef struct {
     Pins_Init RisingFalling_Edge;
     Pins_Init Interrupt_Mask;
 }PinConfig;
+
 typedef struct {
     char ReadPORT;
     Pins_Init WritePIN;

@@ -33,6 +33,33 @@ void ResetISR(void);
 static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
+extern void PortF_ISR(void);
+void Systick_Handler(void);
+
+void Timer0AISR(void);
+void Timer0BISR(void);
+void Timer1AISR(void);
+void Timer1BISR(void);
+void Timer2AISR(void);
+void Timer2BISR(void);
+void Timer3AISR(void);
+void Timer3BISR(void);
+void Timer4AISR(void);
+void Timer4BISR(void);
+void Timer5AISR(void);
+void Timer5BISR(void);
+void WTimer0AISR(void);
+void WTimer0BISR(void);
+void WTimer1AISR(void);
+void WTimer1BISR(void);
+void WTimer2AISR(void);
+void WTimer2BISR(void);
+void WTimer3AISR(void);
+void WTimer3BISR(void);
+void WTimer4AISR(void);
+void WTimer4BISR(void);
+void WTimer5AISR(void);
+void WTimer5BISR(void);
 
 //*****************************************************************************
 //
@@ -82,7 +109,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // Debug monitor handler
     0,                                      // Reserved
     IntDefaultHandler,                      // The PendSV handler
-    IntDefaultHandler,                      // The SysTick handler
+    Systick_Handler,                      // The SysTick handler
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C
@@ -102,12 +129,12 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // ADC Sequence 2
     IntDefaultHandler,                      // ADC Sequence 3
     IntDefaultHandler,                      // Watchdog timer
-    IntDefaultHandler,                      // Timer 0 subtimer A
-    IntDefaultHandler,                      // Timer 0 subtimer B
-    IntDefaultHandler,                      // Timer 1 subtimer A
-    IntDefaultHandler,                      // Timer 1 subtimer B
-    IntDefaultHandler,                      // Timer 2 subtimer A
-    IntDefaultHandler,                      // Timer 2 subtimer B
+    Timer0AISR,                      // Timer 0 subtimer A
+    Timer0BISR,                      // Timer 0 subtimer B
+    Timer1AISR,                      // Timer 1 subtimer A
+    Timer1BISR,                      // Timer 1 subtimer B
+    Timer2AISR,                      // Timer 2 subtimer A
+    Timer2BISR,                      // Timer 2 subtimer B
     IntDefaultHandler,                      // Analog Comparator 0
     IntDefaultHandler,                      // Analog Comparator 1
     IntDefaultHandler,                      // Analog Comparator 2
@@ -118,8 +145,8 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // GPIO Port H
     IntDefaultHandler,                      // UART2 Rx and Tx
     IntDefaultHandler,                      // SSI1 Rx and Tx
-    IntDefaultHandler,                      // Timer 3 subtimer A
-    IntDefaultHandler,                      // Timer 3 subtimer B
+    Timer3AISR,                      // Timer 3 subtimer A
+    Timer3BISR,                      // Timer 3 subtimer B
     IntDefaultHandler,                      // I2C1 Master and Slave
     IntDefaultHandler,                      // Quadrature Encoder 1
     IntDefaultHandler,                      // CAN0
@@ -153,8 +180,8 @@ void (* const g_pfnVectors[])(void) =
     0,                                      // Reserved
     IntDefaultHandler,                      // I2C2 Master and Slave
     IntDefaultHandler,                      // I2C3 Master and Slave
-    IntDefaultHandler,                      // Timer 4 subtimer A
-    IntDefaultHandler,                      // Timer 4 subtimer B
+    Timer4AISR,                      // Timer 4 subtimer A
+    Timer5AISR,                      // Timer 4 subtimer B
     0,                                      // Reserved
     0,                                      // Reserved
     0,                                      // Reserved
@@ -175,20 +202,20 @@ void (* const g_pfnVectors[])(void) =
     0,                                      // Reserved
     0,                                      // Reserved
     0,                                      // Reserved
-    IntDefaultHandler,                      // Timer 5 subtimer A
-    IntDefaultHandler,                      // Timer 5 subtimer B
-    IntDefaultHandler,                      // Wide Timer 0 subtimer A
-    IntDefaultHandler,                      // Wide Timer 0 subtimer B
-    IntDefaultHandler,                      // Wide Timer 1 subtimer A
-    IntDefaultHandler,                      // Wide Timer 1 subtimer B
-    IntDefaultHandler,                      // Wide Timer 2 subtimer A
-    IntDefaultHandler,                      // Wide Timer 2 subtimer B
-    IntDefaultHandler,                      // Wide Timer 3 subtimer A
-    IntDefaultHandler,                      // Wide Timer 3 subtimer B
-    IntDefaultHandler,                      // Wide Timer 4 subtimer A
-    IntDefaultHandler,                      // Wide Timer 4 subtimer B
-    IntDefaultHandler,                      // Wide Timer 5 subtimer A
-    IntDefaultHandler,                      // Wide Timer 5 subtimer B
+    Timer5AISR,                      // Timer 5 subtimer A
+    Timer5BISR,                      // Timer 5 subtimer B
+    WTimer0AISR,                      // Wide Timer 0 subtimer A
+    WTimer0BISR,                      // Wide Timer 0 subtimer B
+    WTimer1AISR,                      // Wide Timer 1 subtimer A
+    WTimer1BISR,                      // Wide Timer 1 subtimer B
+    WTimer2AISR,                      // Wide Timer 2 subtimer A
+    WTimer2BISR,                      // Wide Timer 2 subtimer B
+    WTimer3AISR,                      // Wide Timer 3 subtimer A
+    WTimer3BISR,                      // Wide Timer 3 subtimer B
+    WTimer4AISR,                      // Wide Timer 4 subtimer A
+    WTimer4BISR,                      // Wide Timer 4 subtimer B
+    WTimer5AISR,                      // Wide Timer 5 subtimer A
+    WTimer5BISR,                      // Wide Timer 5 subtimer B
     IntDefaultHandler,                      // FPU
     0,                                      // Reserved
     0,                                      // Reserved

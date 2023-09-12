@@ -1,9 +1,15 @@
-/**
- * main.c
- */
+/********************************************************************************************/
+/* Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb, and Aya Yasser                */
+/* Version: V01                                                                             */
+/* Date: 10/09/2023                                                                         */
+/* Description: DIO Config  file                                                            */
+/********************************************************************************************/
+
 #include "LIB/types.h"
-char Ports_Operating[Port_Num]= {1,1,1,1,1,1}; /*PORTS OPERATINGN = 1 , PORTS NOT OPERATING = 0*/
+
+char Ports_Operating[Port_Num]= {1,1,1,1,1,1}; /*working ports = 1 , non-working ports = 0*/
 PinConfig * PortStruct_ptr[Port_Num]; /*Array of Pointer to struct */
+
 void PORT_CONFIG(void)
 {
     /*PORT A*/
@@ -35,10 +41,10 @@ void PORT_CONFIG(void)
     /*PORT C*/
     PinConfig StructPtr_PORT_C= {
                                  .Pins.Pins_Data=0,
-                                 .Pins.Pins_Data = 0xD0,                   /***********USED PINS***************/
+                                 .Pins.Pins_Data = 0xF0,                   /***********USED PINS***************/
                                  .Pin_DirectionHigh.Pins_Data=0,
                                  .Pin_DirectionHigh.Pins_Data = 0xC0,      /**************OUTPUT PINS**************/
-                                 .PullUp_Down=LOW,     /*PULL-UP*/
+                                 .PullUp_Down=NOT_WORKING,     /*PULL-UP*/
                                  .Interrupts_Enable=LOW,
                                  .Pull_Up.Pins_Data=0,
                                  .Pull_Up.Pins_Data = 0x10,                  /*************PULL_UP PINS****************/
@@ -83,20 +89,20 @@ void PORT_CONFIG(void)
                                  .Pins.Pins_Data = 0x11,                   /***********USED PINS - SWITCH 2***************/
                                  .Pin_DirectionHigh.Pins_Data=0,/**************INPUT PINS**************/
 //                                 .Pin_DirectionHigh.Pins_Data = 0x01,      /**************OUTPUT PINS**************/
-                                 .PullUp_Down=NOT_WORKING,          /*PULL-UP*/
-                                 .Interrupts_Enable=HIGH,
+                                 .PullUp_Down=HIGH,          /*PULL-UP*/
+                                 .Interrupts_Enable=LOW,
                                  .Pull_Up.Pins_Data=0,
                                  .Pull_Up.Pins_Data = 0x11,                  /*************PULL_UP PINS****************/
                                  .Level_Detection.Pins_Data=0,
-                                 .Level_Detection.Pins_Data=0x11,
+                                 .Level_Detection.Pins_Data=0x00,
                                  .Both_Edges.Pins_Data=0,
                                  .RisingFalling_Edge.Pins_Data=0,          /*****************ALL FALLING EDGE****************/
-                                 .Interrupt_Mask.Pins_Data=0x11    /*********Interrupt on PIN0-Interrupt on PIN4**************/
+                                 .Interrupt_Mask.Pins_Data=0x00    /*********Interrupt on PIN0-Interrupt on PIN4**************/
     };
     Read_Write ReadWritePORT_F={
                                 .WritePIN.Pins_Data=0,
-                                //    PORTS_Operation(Ports_Operating,PortStruct_ptr);
     };
     PortStruct_ptr[PORTF]= &StructPtr_PORT_F;
+
 }
 

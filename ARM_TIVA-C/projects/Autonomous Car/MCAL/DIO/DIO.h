@@ -1,17 +1,18 @@
-/*
- * DIO.h
- *
- *  Created on: Aug 13, 2023
- *      Author: EUI-Support
- */
+/********************************************************************************************/
+/* Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb, and Aya Yasser                */
+/* Version: V01                                                                             */
+/* Date: 10/09/2023                                                                         */
+/* Description: DIO header file                                                             */
+/********************************************************************************************/
 
 #ifndef DIO_H_
 #define DIO_H_
-#include "tm4c123gh6pm.h"
+
+#include "LIB/tm4c123gh6pm.h"
 #include "LIB/BIT_MATH.h"
 #include "LIB/types.h"
-/*                                    #DEFINE                                      */
 
+/*definition of a single address with offset that changes based on the port ID*/
 #define PORTS_BASE_ADDRESS  0x40004000
 #define PORT_OFFSET(CpyPort_ID)  (((CpyPort_ID%4)<<12) + (CpyPort_ID/4)*(2<<16))
 #define GPIO_PORT_ADDRESS(REG_OFFSET)   (PORTS_BASE_ADDRESS +PORT_OFFSET(CpyPort_ID) + REG_OFFSET)
@@ -25,7 +26,6 @@
 #define NO_OFFSET           0x000
 
 /* Pin masks */
-
 #define P0          0x01U
 #define P1          0x02U
 #define P2          0x04U
@@ -39,6 +39,7 @@
 #define HIGH_NIBBLE 0XF0U
 #define LOW_NIBBLE  0X0FU
 
+/*pin mux value for timer*/
 #define TIMER_MUX   0x07
 
 
@@ -51,23 +52,21 @@
 #define PORTS_CC 0x3F   // ALL PORT CLOCK CONTROL FOR SYSCTL_RCGCGPIO_R
 #define SET 1
 #define CLEAR 0
-/*                                    EXTERN                                      */
+
 extern PinConfig * PortStruct_ptr[Port_Num];
 extern char Ports_Operating[Port_Num];
+
+
+/*Function prototypes*/
+
 extern void PORT_CONFIG(void);
-/*                                    FUNCTION PTOTOTYPES                                      */
-void PORTS_Operation(void);                   /*Configure which Ports will operate*/
+void PORTS_Operation(void);
 void PORT_Init (Port_Select Port,PinConfig *StructPtr);
 void GPIO_InterruptInit(Port_Select Port,PinConfig *StructPtr);
-/****************************WRITE***********************************/
 void alt_Function(uint8 Port,uint8 pin, uint8 pinmux);
 void analog_Mode(Port_Select Port,uint8 Pins);
-/****************************WRITE***********************************/
-void DIO_WritePin(Port_Select Port,Read_Write *StructPtr);
 void DIO_Write(uint8 CpyPort_ID, uint8 CpyPinMask, uint8 CpyValue);
-//void DIO_WritePort(Port_Select Port,Read_Write *StructPtr,char Set_Clear );
-/***********************READ************************/
-int DIO_ReadPin(Port_Select Port,Read_Write *StructPtr,char Bit);
-void DIO_ReadPort(Port_Select Port,Read_Write *StructPtr);
 uint8 DIO_Read(uint8 CpyPort_ID, uint8 CpyPinMask);
+void DIO_Set_Pullup(uint8 Cpy_Port,uint8 Cpy_PinMask);
+
 #endif /* DIO_H_ */

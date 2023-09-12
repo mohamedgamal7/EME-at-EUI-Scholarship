@@ -1,3 +1,9 @@
+/********************************************************************************************/
+/* Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb, and Aya Yasser                */
+/* Version: V01                                                                             */
+/* Date: 10/09/2023                                                                         */
+/* Description: General-Purpose Timer (GPTM) driver header                                 */
+/********************************************************************************************/
 #ifndef GPTM_H__
 #define GPTM_H__
 
@@ -15,10 +21,10 @@
 
 #define WIDE_TIMER0 (((volatile GPTMRegType *)0x40036000))
 #define WIDE_TIMER1 (((volatile GPTMRegType *)0x40037000))
-#define WIDE_TIMER2 (((volatile GPTMRegType *)0x4003C000))
-#define WIDE_TIMER3 (((volatile GPTMRegType *)0x4003D000))
-#define WIDE_TIMER4 (((volatile GPTMRegType *)0x4003E000))
-#define WIDE_TIMER5 (((volatile GPTMRegType *)0x4003F000))
+#define WIDE_TIMER2 (((volatile GPTMRegType *)0x4004C000))
+#define WIDE_TIMER3 (((volatile GPTMRegType *)0x4004D000))
+#define WIDE_TIMER4 (((volatile GPTMRegType *)0x4004E000))
+#define WIDE_TIMER5 (((volatile GPTMRegType *)0x4004F000))
 
 #define TIMER_0     0U
 #define TIMER_1     1U

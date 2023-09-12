@@ -1,13 +1,14 @@
-/*
- * Author:      Ehab Roshdy                                                                      
- * Version:     0.1                                                                       
- * Date:        10/9/2023                                                                             
- * Description: PWM driver private file                                       
-*/
+/********************************************************************************************/
+/* Authors: Mohamed Gamal, Ehab Roushdy, Mohamed abelmoteleb, and Aya Yasser                */
+/* Version: V01                                                                             */
+/* Date: 10/09/2023                                                                         */
+/* Description: PWM driver private                                                */
+/********************************************************************************************/
 
 #pragma once
 
-////////////////////////////           MACROS           //////////////////////////////////////
+/*Registers definitions*/
+
 #define SYSCTL_RCGC0_R          (*((volatile unsigned long *)0x400FE100))
 #define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))
 
@@ -28,7 +29,4 @@
 #define PWM0_ENABLE_R           (*((volatile unsigned long *)0x40028008))
 
 
-////////////////////////////          VARIABLES         //////////////////////////////////////
-
-////////////////////////////          FUNCTIONS         //////////////////////////////////////
 
