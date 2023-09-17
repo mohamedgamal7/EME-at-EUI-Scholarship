@@ -19,26 +19,26 @@ int32  Reading_differece = 0 ;
 
 void ldr_swing_car(void)
 {
-	/*Check whether the car is in a free running state without facing any obstacles*/
+    /*Check whether the car is in a free running state without facing any obstacles*/
     if(currunt_state == free_running)
     {
-		/*Read LDR values and chose a direction for the car */
+        /*Read LDR values and chose a direction for the car */
         LDR_reading =  LDR_Comp(&Reading_differece);
         switch (LDR_reading)
         {
             case RIGHT:
-            {	 /*Turn the car right*/
+            {    /*Turn the car right*/
                 MotorTurnRight(ENGINE_POWER_LEFT);
                 break;
             }
             case LEFT:
-            { 	/*Turn the car right*/
+            {   /*Turn the car right*/
                 MotorTurnLeft(ENGINE_POWER_RIGHT);
                 break;
             }
             default:
-            {	 /*Move forward by default*/
-                MotorForward(ENGINE_POWER);
+            {    /*Move forward by default*/
+                MotorForward(ENGINE_POWER_FORWARD);
                 break;
             }
         }
@@ -88,21 +88,21 @@ void lcd_display(void)
 
 void avoid_obstacles(void)
 {
-	/*This counter value is found by trial an error to enter this task this number of times to achieve rotation 90 degrees without delays*/
+    /*This counter value is found by trial an error to enter this task this number of times to achieve rotation 90 degrees without delays*/
     static uint8 turnning_counter = 14;
     switch (currunt_state)
     {
-		/*The car is facing an obstacle*/
+        /*The car is facing an obstacle*/
         case blocked_reverse:
         {
-			/*Distance is initially -1 which indicates that a meaurement has been missed */
+            /*Distance is initially -1 which indicates that a meaurement has been missed */
             float distance = -1;
             distance = Measure_Distance();
 
-			/*The car moves backwards until the distance is 20 cm from the object*/
+            /*The car moves backwards until the distance is 20 cm from the object*/
             if(distance > BACK_DISTANCE)
             {
-				/*the car changes the state to turning 90 degrees*/
+                /*the car changes the state to turning 90 degrees*/
                 currunt_state = blocked_turning;
                 MotorTurnRight(ENGINE_POWER_RIGHT);
             }
@@ -116,7 +116,7 @@ void avoid_obstacles(void)
             }
             else
             {
-				/*When the time of turning 90 degrees pass the car moves normally forward again*/
+                /*When the time of turning 90 degrees pass the car moves normally forward again*/
                 turnning_counter = 14;
                 currunt_state = free_running;
                 MotorForward(ENGINE_POWER_FORWARD);
@@ -125,7 +125,7 @@ void avoid_obstacles(void)
         }
         default: /* free_running */
         {
-			/*Distance is initially -1 which indicates that a meaurement has been missed */
+            /*Distance is initially -1 which indicates that a meaurement has been missed */
             float distance = -1;
             distance = Measure_Distance();
 
@@ -136,7 +136,7 @@ void avoid_obstacles(void)
             }
             else
             {
-				/*stay in the current state*/
+                /*stay in the current state*/
                 currunt_state = free_running;
             }
             break;
@@ -146,7 +146,7 @@ void avoid_obstacles(void)
 
 void lcd_display_const_string(void)
 {
-	/*Instead of redisplaying this string on lcd task every time display it once and change the different values only*/	
+    /*Instead of redisplaying this string on lcd task every time display it once and change the different values only*/
     LcdSendString("TEMP:    LDR:   ");
     LcdSendString("TEMP:00 LDR:0000");
     LcdGoTo(ROW2, COL1);

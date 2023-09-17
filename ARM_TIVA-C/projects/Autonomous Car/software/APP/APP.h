@@ -30,6 +30,19 @@
 /*Distance thresolds*/
 #define MAX_DISTANCE 10
 #define WRONG_MEASUREMENT -1
+#define BACK_DISTANCE 20
+
+/*Engine powers*/
+#define ENGINE_POWER_FORWARD 65
+#define ENGINE_POWER_LEFT    100
+#define ENGINE_POWER_RIGHT   100
+
+typedef enum
+{
+    free_running,blocked_turning,blocked_reverse
+}car_state;
+
+
 
 /* Tasks Prototypes */
 
