@@ -60,8 +60,4 @@ The Ethernet Chatroom is a simple server and client chat application designed fo
 
 5. Follow the on-screen instructions to connect to the chat server and start chatting.
 
-## Contributing
-Contributions to this project are welcome! Please follow our [Contribution Guidelines](CONTRIBUTING.md) for more details.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+#
