@@ -10,9 +10,9 @@ uint8_t UART_STATE = 0 ;
 
 void UARTSend(uint32_t ui32UARTBase, const uint8_t *pui8Buffer, uint32_t ui32Count)
 {
-    //
-    // Loop while there are more characters to send.
-    //
+  
+    /* Loop while there are more characters to send.*/
+   
     while(ui32Count--)
     {
         //
@@ -129,7 +129,6 @@ int main(void)
                 if(i >= 200)
                     GPIOPinWrite(GPIO_PORTF_BASE, (GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3), GPIO_PIN_1);
 
-            //    UARTCharPut(UART1_BASE, data);
                 UARTSend(UART1_BASE, data, i);
 
                 UART_STATE--;
