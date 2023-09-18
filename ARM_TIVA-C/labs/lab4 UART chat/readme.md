@@ -1,6 +1,5 @@
 # UART Chat with Tiva C TM4C123GXL
 
-![Tiva C TM4C123](tiva_c_tm4c123.jpg)
 
 ## Table of Contents
 - [Introduction](#introduction)
