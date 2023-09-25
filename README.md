@@ -16,11 +16,11 @@ This repository is meticulously organized to encompass a wide range of topics co
 
 - 📁 [ARM Cortex M4 on TivaC TM4c123GXL](./ARM_TIVA-C): Witness a series of exciting ARM Tiva C microcontroller projects showcasing my advanced programming skills. 
 
-  ![ARM Tiva-C Projects Progress](https://progress-bar.dev/70/?title=Progress&color=red,yellow,green)
+  ![ARM Tiva-C Projects Progress](https://progress-bar.dev/100/?title=Progress&color=red,yellow,green)
 
 - 📁 [RTOS](./RTOS): Delve into Real-Time Operating System projects, unraveling the intricacies of time-sensitive automotive applications.
 
-  ![RTOS Progress](https://progress-bar.dev/0/?title=Progress&color=red)
+  ![RTOS Progress](https://progress-bar.dev/50/?title=Progress&color=red,yellow,green)
 
 - 📁 [Autosar](./Autosar): Discover projects focusing on the Automotive Open System Architecture, exploring its applications in the automotive industry.
 
