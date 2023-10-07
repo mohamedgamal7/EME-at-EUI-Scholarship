@@ -203,13 +203,13 @@ void main(void)
 
         TIMER0_CFG_R=0x04;
 
-        TIMER0_TAMR_R=0x2;
+        TIMER0_TAMR_R=0x1;
 
         CLR_BIT(TIMER0_TAMR_R,4);
 
         TIMER0_TAILR_R=65535;
 
-        TIMER0_TAPR_R = 122;
+        TIMER0_TAPR_R = 255;
 
         SET_BIT(TIMER0_IMR_R,0);
 
